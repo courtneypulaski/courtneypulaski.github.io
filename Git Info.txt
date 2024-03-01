@@ -1,0 +1,52 @@
+Git Info
+
+* git add .
+  - adds all files in the current folder to have changes tracked
+  - for one file instead of all, change the . to a file name abc.html, or a folder folder/*
+* git commit -m "comment here"
+  - commits the changes with a message (-m) with the quoted text
+
+
+
+all of them
+* git init    ### Initializes a git repo
+* git add .   ### This stages your work to be committed, after you edit files
+* git commit -m "Your commit message here"   ### This saves your work at that point
+* git status   ### Tells you the status of your files
+* git log   ### Gives you a log of your commits (Use Q to exit the log)
+* git diff   ### Use before git add to see changes you're about to save
+
+
+github
+https://github.com/courtneypulaski/courtneypulaski.github.io.git
+* git checkout -b cp561123/new_header
+  - adds a new branch called cp561123/new_header from the master 
+
+
+
+
+
+starting off
+* git fetch origin master
+  - updates from origin to local master
+* git checkout -b cp561123/<description>
+  - adds a new branch called cp561123/<description> from the master
+* make changes within branch
+* git add .
+  - stages changes to be committed
+* git commit -m "checkin message"
+  - commits the changes to the local branch
+A) TO DO THE MERGE LOCALLY BEFORE PUSHING UP TO GITHUB
+* git checkout master
+  - moves back to the master branch
+* git merge cp561123/<description>
+  - merges the given branch into the current branch (master)
+* git push origin master 
+  - pushes the changes in master to the origin (github)
+B) TO DO THE MERGE IN GITHUB
+* git checkout cp561123/<description>
+  - make sure you're in the changed branch
+* git push -u origin cp561123/<description>
+
+
+git transport: https://images.osteele.com/2008/git-transport.png

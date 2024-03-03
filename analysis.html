@@ -15,29 +15,167 @@
         </header>
         <div>
             <h1>Initial Request</h1>
-            <img src="assets/Request.png" alt="Business Request" id="Bus_Request">
-        </div>
-        <div>
-            <h1>Requirements Gathering</h1>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Question</th>
-                    <th>Answer</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Will there be any plans in the future to offer additional types of food?</td>
-                    <td>Yes, at some point we would like to offer additional sandwiches</td>
-                </tr>
-            </table>
+            <p>In an effort to provide meals to our users, we would like to provide the ability to offer peanut butter and jelly sandwiches. The users should be able to
+            select a sandwich, and pick it up at the kitchen in the cafeteria when it is ready.
+            </p>
         </div>
         <div>
             <h1>Design Documentation</h1>
-        </div>
-        <div>
-            <h1>Test Cases</h1>
+            <h2>Purpose</h2>
+            <p>This functionality will allow users to select a meal and automatically send it to the kitchen where it will be prepared and waiting. 
+                Users will be able to select the types of foods they would like, while specified admin users will be able to set up the options that are available for a given day or a given meal. The
+                current set up will allow users to choose a single meal type - a Peanut Butter and Jelly sandwich - with several options, but this system is being designed in order to allow for additional 
+                offerings in the future.</p>
+            <h2>Configuration</h2>
+            <h3>Usage Configuration</h3>
+            <table>
+                <tr>
+                    <th>Option Name</th>
+                    <th>Option Values</th>
+                    <th>Option Functionality</th>
+                </tr>
+                <tr>
+                    <td>Food Offered</td>
+                    <td>Y,N</td>
+                    <td>A toggle for whether food is currently being offered or not</td>
+                </tr>
+            </table>
+            <h3>Technical Configuration</h3>
+            <table>
+                <tr>
+                    <th>Option Name</th>
+                    <th>Option Values</th>
+                    <th>Option Functionality</th>
+                </tr>
+                <tr>
+                    <td>API Key</td>
+                    <td>654a65sd4f5646a54f65a46f</td>
+                    <td>The value of the API key used to identify the application to the service. Should not be changed once set.</td>
+                </tr>
+            </table>
+            <h2>Usage</h2>
+            <h3>General Information</h3>
+            <p>Users of the system will be able to order a meal. Currently there is one meal option available - Peanut Butter and Jelly (PBJ) sandwich. There are various customizations
+            available for the sandwich, which can be toggled as needed by the pre-set system adminstrators. The system is designed so that in the future, additional menu items and customizations
+            can be added.</p>
+            <h3>Adminstration</h3>
+            <p>A system adminstrator will be able to set up customizations for a given meal. The list of any available items will be available on the new Admin screen, and each item can be 
+                selected. A new section will appear that will include customizations that have been set up for that particular food item, and each customization can be toggled on or off depending
+                on availability of the selection. For some customizations, individual items can be toggled or changed.</p>
+            <p>For the peanut butter and jelly, there are several customizations:</p>
+            <ul>
+                <li><b>Bread:</b> Two types of bread will be available to start with - Whole Wheat and White. Adminstrators will be able to add additional types of bread or remove existing ones, as well as
+                toggle the availability of all types on or off. Note that at least one type of bread must be available and toggled on or the data cannot be saved. The bread can also be further customized:</li>
+                <ul>
+                    <li><b>Toasted:</b> Yes or No option, determines whether the bread will be toasted.</li>
+                    <li>All customizations are able to be toggled on or off individually, as well as having new options added or existing options removed.</li>
+                </ul>
+                <li><b>Peanut Butter:</b> Three types of peanut butter will be available to start with - Chunky Peanut, Smooth Peanut, or Almond. Adminstrators will be able to add additional types of peanut butter
+                    or remove existing ones, as well as toggle the availability of each individual on or off. Additional customization options will be available, which can individually be toggled on or off:</li>
+                <ul>
+                    <li><b>Amount:</b> Light, Regular, or Extra options, determines how much peanut butter will be on the sandwich.</li>
+                    <li>All customizations are able to be toggled on or off individually, as well as having new options added or existing options removed.</li>
+                </ul>
+                <li><b>Jelly:</b> Two types of jelly will be available to start with - Jelly or Jam. Adminstrators will be able to add additional types of jelly
+                    or remove existing ones, as well as toggle the availability of each individual on or off. Additional customization options will be available, which can individually be toggled on or off:</li>
+                <ul>
+                    <li><b>Amount:</b> Light, Regular, or Extra options, determines how much jelly will be on the sandwich.</li>
+                    <li><b>Flavor:</b> Strawberry, Grape, Mixed Fruit, determines the flavor of jelly or jam.</li>
+                    <li>All customizations are able to be toggled on or off individually, as well as having new options added or existing options removed.</li>
+                </ul>
+                <li><b>Drink:</b> Three types of drinks will be available to start with - Juice, Milk, or Soda. Adminstrators will be able to add additional types of drinks
+                    or remove existing ones, as well as toggle the availability of each individual on or off. Additional customization options will be available, which can individually be toggled on or off:</li>
+                <ul>
+                    <li><b>Juice:</b> If Juice is selected, then the options available will start with Apple, Orange, Cranberry.</li>
+                    <li><b>Milk:</b> If Milk is selected, then the options available will start with Chocolate, Vanilla, Strawberry, Regular, or Almond.</li>
+                    <li><b>Soda:</b> If Soda is selected, then the options available will start with Coke, Diet Coke, Coke Zero, Cherry Coke, Cherry Coke Zero, Sprite, Orange Soda, Root Beer.</li>
+                    <li><b>Size:</b> Small, Medium, Large options, determines how much drink will be provided.</li>
+                    <li>All customizations are able to be toggled on or off individually, as well as having new options added or existing options removed.</li>
+                </ul>
             </ul>
+            <h3>User Functionality</h3>
+            <p>A user will be able to access the screen and select options for a peanut butter and jelly sandwich. Several things are able to be customized, with options based on what the system
+                adminstrators have selected or toggled.</p>
+            <ul>
+                <li><b>Bread: </b>(Required) User will need to choose an option for bread. The following customizations are available:
+                    <ul>
+                        <li><em>Bread Type</em> will determine what type of bread is used. INITIAL: WHOLE WHEAT, WHITE.</li>
+                        <li><em>Toasted</em> will determine whether the bread should be toasted (Y) or not (N). OPTIONS: Y, N.</li>
+                        <li>NOTE: If the bread types have not been set up by an adminstrator, or if none are remaining or toggled on, then the PBJ option will be unavailable.</li>
+                    </ul> 
+                </li>
+                <li><b>Peanut Butter: </b>User will need to choose an option for peanut butter. The following customizations are available:
+                    <ul>
+                        <li><em>Peanut Butter Type</em> will determine what type of peanut butter is used. INITIAL: CHUNKY, SMOOTH, ALMOND.</li>
+                        <li><em>Amount</em> will determine how much peanut butter should be used. Light will be 50% of the regular amount, and extra will be 150%. OPTIONS: LIGHT, REGULAR, EXTRA.</li>
+                        <li>NOTE: Either Peanut Butter or Jelly must be selected. A user is allowed to choose only one.</li>
+                    </ul> 
+                </li>
+                <li><b>Jelly: </b>User will need to choose an option for Jelly. The following customizations are available:
+                    <ul>
+                        <li><em>Jelly Type</em> will determine what type of jelly is used. INITIAL: JELLY, JAM.</li>
+                        <li><em>Flavor</em> will determine what flavor of jelly should be used. OPTIONS: STRAWBERRY, GRAPE, MIXED FRUIT.</li>
+                        <li><em>Amount</em> will determine how much jelly should be used. Light will be 50% of the regular amount, and extra will be 150%. OPTIONS: LIGHT, REGULAR, EXTRA.</li>
+                        <li>NOTE: Either Peanut Butter or Jelly must be selected. A user is allowed to choose only one.</li>
+                    </ul> 
+                </li>
+                <li><b>Drink: </b>(Optional) User will be able to choose an option for a drink. User can choose between three drink types initially, with additional options becoming available once
+                    an initial selection is made. The following customizations are available:
+                    <ul>
+                        <li><em>JUICE:</em> If the initial option of JUICE is chosen, then the user will be able to select a type of juice. INITIAL: APPLE, ORANGE, CRANBERRY.</li>
+                        <li><em>MILK:</em> If the inital option of MILK is chosen, then the user will be able to select a type of milk. INITIAL: REGULAR, VANILLA, CHOCOLATE, STRAWBERRY, ALMOND.</li>
+                        <li><em>SODA:</em> If the inital option of SODA is chosen, then the user will be able to select a type of soda. INITIAL: COKE, CHERRY COKE, DIET COKE, COKE ZERO, CHERRY COKE ZERO,
+                            SPRITE, ORANGE SODA, ROOT BEER.</li>
+                        <li><em>Size</em> will determine how much of the drink should be provided. Small will be 12oz, Medium will be 16oz, and Large will be 20oz. OPTIONS: SMALL, MEDIUM, LARGE.</li>
+                    </ul> 
+                </li>
+            </ul>
+            <h3>Technical Functionality</h3>
+            <h4>Connection Information</h4>
+            <p>The system will send the information into the kitchen via the higgledy-piggledy API server. A request will be sent, and when the server receives the response
+                and successfully sends it to the server in the kitchen, a response will be generated and sent back with one of a list of response codes. Once the kitchen receives the request, that server
+                will translate the request and print it out so it can be created by others and served up waiting.</p>
+            <h4>Request & Response</h4>
+            <p>The request will be formatted as a JSON string with the information input from the user as the data points.</p>
+            <p>
+                {<br>
+                    &emsp;"BreadType": "WholeWheat",<br>
+                    &emsp;"Toasted": "Y",<br>
+                    &emsp;"PeanutButterType": "Chunky",<br>
+                    &emsp;"PeanutButterAmount": "Regular",<br>
+                    &emsp;"JellyType": "Jelly",<br>
+                    &emsp;"JellyFlavor": "Grape",<br>
+                    &emsp;"JellyAmount": "Regular",<br>
+                    &emsp;"Drink": "(Soda, Coke Zero)",<br>
+                    &emsp;"DrinkSize": "Medium"<br>
+                }
+            </p>
+            <p>The response will be formatted as a JSON string, and will send back a request based on a key of response codes</p>
+            <p>
+                {<br>
+                    &emsp;"ResponseCd": "100",<br>
+                    &emsp;"Error": "None"<br>
+                }
+            </p>
+            <p>Possible Response Codes:</p>
+            <table>
+                <tr>
+                    <th>Response Code</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>Success</td>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>System Unavailable</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Issue With Request</td>
+                </tr>
+            </table>
         </div>
     </body>
 </html> 

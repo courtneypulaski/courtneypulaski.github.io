@@ -16,3 +16,6 @@ table,th,td {
 table {
     width: 70%;
 }
+body {
+    margin: 10px;
+}

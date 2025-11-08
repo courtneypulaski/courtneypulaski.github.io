@@ -23,11 +23,13 @@ function calculate() {
     const weightLBNum = parseFloat(weightLB);
     const weightKGNum = parseFloat(weightKG);
 
-    console.log("Age:", ageNum);
-    console.log("Height:", heightIN != 0 ? parseFloat(heightIN) : parseFloat(heightCM));
-    console.log("Gender:",gender);
-    console.log("Weight:", weightLB != 0 ? parseFloat(weightLB) : parseFloat(weightKG));
-    console.log("Units:",units);
+    /*
+        console.log("Age:", ageNum);
+        console.log("Height:", heightIN != 0 ? parseFloat(heightIN) : parseFloat(heightCM));
+        console.log("Gender:",gender);
+        console.log("Weight:", weightLB != 0 ? parseFloat(weightLB) : parseFloat(weightKG));
+        console.log("Units:",units);
+    */
 
     if (units == "Imperial") {
         weightKG = weightLBNum / 2.2
@@ -43,8 +45,8 @@ function calculate() {
     bmi = (weightKG / (heightM * heightM))
     //bmi = Math.round(bmi*10)/10
 
-    console.log("BMI: ", bmi);
-    console.log("Height in Inches:", heightIN/12);
+   /*  console.log("BMI: ", bmi);
+    console.log("Height in Inches:", heightIN/12); */
 
     if (units == "Imperial") {
         document.getElementById("bmi-result").innerHTML = `Your weight in KG is ${weightKG.toFixed(2)}<br>Your height in CM is ${heightCM.toFixed(2)}<br>Your BMI is ${bmi.toFixed(1)}`;

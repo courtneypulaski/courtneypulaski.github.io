@@ -55,12 +55,24 @@ function calculate() {
     if (units == "Metric") {
         document.getElementById("bmi-result").innerHTML = `Your weight in LB is ${weightLB.toFixed(2)}<br>Your height in IN is ${(Math.floor(heightIN/12)).toFixed(0)} feet and ${(heightIN%12).toFixed(0)} inches<br>Your BMI is ${bmi.toFixed(1)}`;
     }
-    
+    let bmr = getBMR(gender, weightKG, heightCM, ageNum).toFixed(0);
 
+    document.getElementById("tdee-result").innerHTML = `Your BMR is ${bmr}<br>Your Sedentary TDEE is ${(bmr * 1.2).toFixed(0)}`;
+}
+
+function getBMR(gender, weight, height, age) {
+    //whatever I googled formula
+    //return gender = "female" ? (447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age)) :
+      //  (88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age))
+
+    //Mifflin-St Jeor Equation
+    return gender = "female" ? (10 * weight) + (6.25 * height) - (5 * age) - 161 :
+        (10 * weight) + (6.25 * height) - (5 * age) + 5;
 }
 
 function clearForm() {
     document.getElementById("bmi-result").textContent = "";
+    document.getElementById("tdee-result").textContent = "";
     document.getElementById("age").value = "";
     document.getElementById("height").value = 68;
     document.getElementById("gender").value = "female";

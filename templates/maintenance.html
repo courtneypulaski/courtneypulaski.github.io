@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Courtney Pulaski</title>
+        <link rel="stylesheet" href="personalpage.css">
+    </head>
+    <body>
+        <h1>Maintenance Tracker</h1>
+        <div>
+            <h2>Create Maintenance</h2>
+            <form>
+                <label for="maint_type">Maintenance Type:</label>
+                <select name="maint_type" id="maint_type" multiple></select>
+            </form>
+        </div>
+
+    <script src="{{ url_for('static', filename='maintenance.js') }}"></script>
+    </body>
+</html>

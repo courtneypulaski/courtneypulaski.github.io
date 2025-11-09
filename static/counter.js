@@ -83,6 +83,18 @@ function clearForm() {
     
 }
 
+function populateHeights() {
+    let minHeight = 55; // 4 foot 7
+    let maxHeight = 84; // 7 foot
+    height_list = document.getElementById("height");
+    for (let i = minHeight; i<= maxHeight; i++) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.text = Math.floor(i/12).toFixed(0) + "ft " + (i%12).toFixed(0) + "in";
+        height_list.appendChild(option);
+    }
+}
+
 function updateUnitInput() {
     const isImperial = document.getElementById("imperial").checked;
 
@@ -97,6 +109,7 @@ function updateUnitInput() {
 
 window.onload = function() {
   updateUnitInput(); // run once on page load
+  populateHeights();
   document.getElementById("imperial").addEventListener("change", updateUnitInput);
   document.getElementById("metric").addEventListener("change", updateUnitInput);
 };

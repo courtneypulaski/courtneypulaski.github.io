@@ -31,9 +31,9 @@
             <h1>Professional Stuff</h1>
             <p>Check these things out:</p>
             <ul>
-                <a href="assets/Courtney_Pulaski_Resume.pdf"><li>My Resume</li></a>
-                <a href="assets/CS50P.png"><li>CS50 Certificate</li></a>
-                <a href="Counter.html"><li>Weight/Calorie Tracker</li></a>
+                <li><a href="{{ url_for('static', filename='assets/Courtney_Pulaski_Resume.pdf') }}">My Resume</a></li>
+                <li><a href="{{ url_for('static', filename='assets/CS50P.png') }}">CS50 Certificate</a></li>
+                <li><a href="{{ url_for('counter') }}">Weight/Calorie Tracker</a></li>
             </ul>
         </div>
     </body>

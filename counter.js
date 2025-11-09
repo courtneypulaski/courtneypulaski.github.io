@@ -93,6 +93,7 @@ function populateHeights() {
         option.text = Math.floor(i/12).toFixed(0) + "ft " + (i%12).toFixed(0) + "in";
         height_list.appendChild(option);
     }
+    height_list.value = 68;
 }
 
 function updateUnitInput() {

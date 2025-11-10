@@ -19,3 +19,8 @@ table {
 body {
     margin: 10px;
 }
+
+#env_list {
+    height: 300px;
+    width: 200px;
+}
